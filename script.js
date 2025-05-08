@@ -13,7 +13,7 @@ addButton.addEventListener('click',function(){
         taskItem.style.opacity = '0';
         setTimeout(function(){
             taskItem.style.opacity = '1';
-        })
+        }, 300);
         // requestAnimationFrame(function(){ 
         //     taskItem.style.opacity = '1';
         // }); //這個也可以，但動畫更流暢配合螢幕刷新率、效能更好、資源更省
