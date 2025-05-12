@@ -2,7 +2,7 @@ const taskInput = document.querySelector('#taskInput');
 const addButton = document.querySelector('#addButton');
 const taskList = document.querySelector('#taskList');
 
-addButton.addEventListener('click', function () {
+function addtask() {
     const taskText = taskInput.value.trim();    //.trim() 避免儲存或處理一堆開頭或結尾有空白的資料
 
     if (taskText) {
@@ -27,7 +27,7 @@ addButton.addEventListener('click', function () {
     <i class="fa-solid fa-trash delete-icon"></i>`;
 
         deleteButton.addEventListener('click', function () {
-                taskItem.remove();
+            taskItem.remove();
         });
 
         taskItem.appendChild(deleteButton);
@@ -36,4 +36,12 @@ addButton.addEventListener('click', function () {
 
         taskInput.value = '';
     }
-});
+};
+
+taskInput.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        addtask()
+    }
+})
+
+addButton.addEventListener('click', addtask)
