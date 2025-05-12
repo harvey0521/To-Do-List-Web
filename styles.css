@@ -142,13 +142,12 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* opacity: 1; */
     transition: all 1s ease-in-out;
 }
 
 #taskList li.finish {
     text-decoration: line-through;
-    color: #888;
+    color: #555555;
 }
 
 #taskList li button {
