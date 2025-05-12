@@ -9,10 +9,10 @@ addButton.addEventListener('click', function () {
         const taskItem = document.createElement('li')
         taskItem.textContent = taskText;
 
-        taskItem.style.opacity = '0';
-        setTimeout(function () {
-            taskItem.style.opacity = '1';
-        }, 300);
+        // taskItem.style.opacity = '0';
+        // setTimeout(function () {
+        //     taskItem.style.opacity = '1';
+        // }, 10);
         // requestAnimationFrame(function(){ 
         //     taskItem.style.opacity = '1';
         // }); //這個也可以，但動畫更流暢配合螢幕刷新率、效能更好、資源更省
@@ -27,10 +27,7 @@ addButton.addEventListener('click', function () {
     <i class="fa-solid fa-trash delete-icon"></i>`;
 
         deleteButton.addEventListener('click', function () {
-            taskItem.style.opacity = '0';
-            setTimeout(function () {
                 taskItem.remove();
-            }, 500)
         });
 
         taskItem.appendChild(deleteButton);

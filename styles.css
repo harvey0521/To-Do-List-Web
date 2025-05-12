@@ -76,6 +76,10 @@ h1 {
     transition: width 0.5s ease-in-out
 }
 
+#taskInput::placeholder{
+    color: black;
+}
+
 #taskInput:focus {
     outline: none;
     height: 50px;
@@ -127,6 +131,7 @@ h1 {
     padding: 0;
 }
 
+
 #taskList li {
     color: black;
     font-family: Klee One;
@@ -137,8 +142,8 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    opacity: 1;
-    transition: all 1s ease;
+    /* opacity: 1; */
+    transition: all 1s ease-in-out;
 }
 
 #taskList li.finish {
